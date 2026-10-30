@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Exoplanet Explorer</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #0b1026;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .planet {
+            background: #171d3d;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 15px;
+            max-width: 600px;
+        }
+
+        h1 {
+            font-size: 40px;
+        }
+
+        h2 {
+            color: #8ab4ff;
+        }
+
+        input {
+            width: 80%;
+            max-width: 500px;
+            padding: 12px;
+            margin: 20px;
+            border-radius: 8px;
+            border: none;
+            font-size: 16px;
+        }
+      .comparison {
+    background: #0b1026;
+    border: 1px solid #2d3a70;
+    border-radius: 12px;
+    padding: 15px;
+    margin-top: 15px;
+}
+
+.compare-box {
+    background: #171d3d;
+    border-radius: 15px;
+    padding: 20px;
+    max-width: 700px;
+    margin: 30px auto;
+}
+
+select,
+button {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 8px;
+    border: none;
+    font-size: 15px;
+}
+
+button {
+    cursor: pointer;
+    background: #8ab4ff;
+}  
+
+.bar {
+    height: 15px;
+    background: #8ab4ff;
+    border-radius: 10px;
+    margin-top: 8px;
+}.facts {
+    background: #101735;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 15px;
+    text-align: left;
+}
+
+.facts h3 {
+    color: #8ab4ff;
+}
+    </style>
+</head>
+
+<body>
+
+    <h1>🌌 Exoplanet Explorer</h1>
+
+    <p>Explore worlds beyond our Solar System.</p>
+
+    <input
+        type="text"
+        id="search"
+        placeholder="🔎 Search for an exoplanet..."
+        <div class="compare-box">
+    <h2>🔭 Compare Exoplanets</h2>
+
+    <select id="planet1">
+        <option value="kepler">Kepler-22b</option>
+        <option value="trappist">TRAPPIST-1e</option>
+        <option value="pegasi">51 Pegasi b</option>
+        <option value="cancri">55 Cancri e</option>
+<option value="wasp">WASP-12 b</option>
+        <option value="hd209">HD 209458 b</option>
+        <option value="gj1214">GJ 1214 b</option>
+        <option value="k218">K2-18 b</option>
+    </select>
+
+    <select id="planet2">
+        <option value="trappist">TRAPPIST-1e</option>
+        <option value="kepler">Kepler-22b</option>
+        <option value="pegasi">51 Pegasi b</option>
+        <option value="cancri">55 Cancri e</option>
+        <option value="wasp">WASP-12 b</option>
+        <option value="hd209">HD 209458 b</option>
+        <option value="gj1214">GJ 1214 b</option>
+        <option value="k218">K2-18 b</option>
+    </select>
+
+    <button onclick="comparePlanets()">Compare</button>
+
+    <div id="comparisonResult"></div>
+    <canvas id="comparisonChart" width="500" height="250"></canvas>
+</div>
+    >
+
+    <div class="planet">
+        <h2>Kepler-22b</h2>
+        <p>🌍 Radius: 2.1 × Earth</p>
+        <p>🌎 About 2.1 times Earth's radius</p>
+        <div class="comparison">
+    <p>🌍 Size compared with Earth</p>
+    <div class="bar" style="width: 80%;"></div>
+</div>
+        <p>⚖️ Mass: 9.1 × Earth</p>
+        <p>⏱️ Orbital period: 289.9 days</p>
+        <p>⭐ Host star: Kepler-22</p>
+        <div class="facts">
+    <h3>🌌 Did You Know?</h3>
+    <p>
+        Kepler-22b was one of the first confirmed planets discovered
+        in the habitable zone of a Sun-like star.
+    </p>
+</div>
+    </div>
+
+    <div class="planet">
+        <h2>TRAPPIST-1e</h2>
+        <p>🌍 Radius: 0.92 × Earth</p>
+        <p>🌎 About 0.92 times Earth's radius</p>
+        <div class="comparison">
+    <p>🌍 Size compared with Earth</p>
+    <div class="bar" style="width: 92%;"></div>
+</div>
+        <p>⚖️ Mass: 0.692 × Earth</p>
+        <p>⏱️ Orbital period: 6.1 days</p>
+        <p>⭐ Host star: TRAPPIST-1</p>
+        <div class="facts">
+    <h3>🌌 Did You Know?</h3>
+    <p>
+        TRAPPIST-1e is one of seven known Earth-sized planets
+        orbiting the ultracool dwarf star TRAPPIST-1.
+    </p>
+</div>
+    </div>
+
+   <div class="planet">
+    <h2>51 Pegasi b</h2>
+
+    <p>🌍 Radius: 1.26 × Jupiter</p>
+    <p>🌎 About 1.26 times Jupiter's radius</p>
+
+    <div class="comparison">
+        <p>🪐 Size compared with Jupiter</p>
+        <div class="bar" style="width: 60%;"></div>
+    </div>
+
+    <p>⚖️ Mass: 0.61 × Jupiter</p>
+    <p>⏱️ Orbital period: 4.2 days</p>
+    <p>⭐ Host star: 51 Pegasi</p>
+
+    <div class="facts">
+        <h3>🌌 Did You Know?</h3>
+        <p>
+            51 Pegasi b was the first exoplanet discovered
+            orbiting a Sun-like star, announced in 1995.
+        </p>
+    </div>
+</div>
+
+
+<div class="planet">
+    <h2>55 Cancri e</h2>
+
+    <p>🌍 Radius: 1.875 × Earth</p>
+    <p>⚖️ Mass: 7.99 × Earth</p>
+    <p>⏱️ Orbital period: 0.7 days</p>
+    <p>⭐ Host star: 55 Cancri</p>
+
+    <p>🌎 About 1.875 times Earth's radius</p>
+
+    <div class="comparison">
+        <p>🌍 Size compared with Earth</p>
+        <div class="bar" style="width: 75%;"></div>
+    </div>
+
+    <div class="facts">
+        <h3>🌌 Did You Know?</h3>
+        <p>
+            55 Cancri e is an extremely hot super-Earth
+            that may have a global ocean of lava.
+        </p>
+    </div>
+</div>
+       
+<div class="planet">
+    <h2>WASP-12 b</h2>
+
+    <p>🌍 Radius: 1.965 × Jupiter</p>
+    <p>⚖️ Mass: 1.47 × Jupiter</p>
+    <p>⏱️ Orbital period: 1.1 days</p>
+    <p>⭐ Host star: WASP-12</p>
+
+    <p>🪐 About 1.965 times Jupiter's radius</p>
+
+    <div class="comparison">
+        <p>🪐 Size compared with Jupiter</p>
+        <div class="bar" style="width: 85%;"></div>
+    </div>
+
+    <div class="facts">
+        <h3>🌌 Did You Know?</h3>
+        <p>
+            WASP-12 b is an extremely hot Jupiter that orbits
+            so close to its star that material is being pulled
+            away from the planet.
+        </p>
+    </div>
+</div>
+<div class="planet">
+    <h2>HD 209458 b</h2>
+    <p>🌍 Radius: 1.38 × Jupiter</p>
+    <p>⚖️ Mass: 0.69 × Jupiter</p>
+    <p>⏱️ Orbital period: 3.5 days</p>
+    <p>⭐ Host star: HD 209458</p>
+    <p>🪐 About 1.38 times Jupiter's radius</p>
+
+    <div class="comparison">
+        <p>🪐 Size compared with Jupiter</p>
+        <div class="bar" style="width: 70%;"></div>
+    </div>
+
+    <div class="facts">
+        <h3>🌌 Did You Know?</h3>
+        <p>
+            HD 209458 b was the first exoplanet observed transiting
+            its star and the first known exoplanet with an atmosphere
+            detected through transit observations.
+        </p>
+    </div>
+</div>
+<div class="planet">
+    <h2>GJ 1214 b</h2>
+    <p>🌍 Radius: 2.7 × Earth</p>
+    <p>⚖️ Mass: 6.3 × Earth</p>
+    <p>⏱️ Orbital period: 1.6 days</p>
+    <p>⭐ Host star: GJ 1214</p>
+    <p>🌎 About 2.7 times Earth's radius</p>
+
+    <div class="comparison">
+        <p>🌍 Size compared with Earth</p>
+        <div class="bar" style="width: 80%;"></div>
+    </div>
+
+    <div class="facts">
+        <h3>🌌 Did You Know?</h3>
+        <p>
+            GJ 1214 b is a sub-Neptune exoplanet that orbits
+            very close to its small host star.
+        </p>
+    </div>
+</div>
+<div class="planet">
+    <h2>K2-18 b</h2>
+    <p>🌍 Radius: 2.6 × Earth</p>
+    <p>⚖️ Mass: 8.6 × Earth</p>
+    <p>⏱️ Orbital period: 32.9 days</p>
+    <p>⭐ Host star: K2-18</p>
+    <p>🌎 About 2.6 times Earth's radius</p>
+
+    <div class="comparison">
+        <p>🌍 Size compared with Earth</p>
+        <div class="bar" style="width: 78%;"></div>
+    </div>
+
+    <div class="facts">
+        <h3>🌌 Did You Know?</h3>
+        <p>
+            K2-18 b is a sub-Neptune orbiting within the habitable
+            zone of its red dwarf star, making it an important target
+            for studying exoplanet atmospheres.
+        </p>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+    const searchBox = document.getElementById("search");
+    const planets = document.querySelectorAll(".planet");
+
+    searchBox.addEventListener("input", function () {
+        const searchText = searchBox.value.toLowerCase();
+
+        planets.forEach(function (planet) {
+            const planetName =
+                planet.querySelector("h2").textContent.toLowerCase();
+
+            if (planetName.includes(searchText)) {
+                planet.style.display = "block";
+            } else {
+                planet.style.display = "none";
+            }
+        });
+    });
+
+
+    function comparePlanets() {
+
+        const planet1 = document.getElementById("planet1").value;
+        const planet2 = document.getElementById("planet2").value;
+
+        const data = {
+
+            kepler: {
+                name: "Kepler-22b",
+                radius: "2.1 × Earth",
+                radiusValue: 2.1,
+                radiusUnit: "Earth",
+                mass: "9.1 × Earth",
+                massValue: 9.1,
+                massUnit: "Earth",
+                period: "289.9 days",
+                periodValue: 289.9
+            },
+
+            trappist: {
+                name: "TRAPPIST-1e",
+                radius: "0.92 × Earth",
+                radiusValue: 0.92,
+                radiusUnit: "Earth",
+                mass: "0.692 × Earth",
+                massValue: 0.692,
+                massUnit: "Earth",
+                period: "6.1 days",
+                periodValue: 6.1
+            },
+
+            pegasi: {
+                name: "51 Pegasi b",
+                radius: "1.26 × Jupiter",
+                radiusValue: 1.26,
+                radiusUnit: "Jupiter",
+                mass: "0.61 × Jupiter",
+                massValue: 0.61,
+                massUnit: "Jupiter",
+                period: "4.2 days",
+                periodValue: 4.2
+            },
+
+            cancri: {
+                name: "55 Cancri e",
+                radius: "1.875 × Earth",
+                radiusValue: 1.875,
+                radiusUnit: "Earth",
+                mass: "7.99 × Earth",
+                massValue: 7.99,
+                massUnit: "Earth",
+                period: "0.7 days",
+                periodValue: 0.7
+            },
+
+            wasp: {
+                name: "WASP-12 b",
+                radius: "1.965 × Jupiter",
+                radiusValue: 1.965,
+                radiusUnit: "Jupiter",
+                mass: "1.47 × Jupiter",
+                massValue: 1.47,
+                massUnit: "Jupiter",
+                period: "1.1 days",
+                periodValue: 1.1
+            },
+            hd209: {
+                name: "HD 209458 b",
+                radius: "1.38 × Jupiter",
+                radiusValue: 1.38,
+                radiusUnit: "Jupiter",
+                mass: "0.69 × Jupiter",
+                massValue: 0.69,
+                massUnit: "Jupiter",
+                period: "3.5 days",
+                periodValue: 3.5
+            },
+            gj1214: {
+                name: "GJ 1214 b",
+                radius: "2.68 × Earth",
+                radiusValue: 2.68,
+                radiusUnit: "Earth",
+                mass: "6.55 × Earth",
+                massValue: 6.55,
+                massUnit: "Earth",
+                period: "1.58 days",
+                periodValue: 1.58
+            },
+            k218: {
+                name: "K2-18 b",
+                radius: "2.71 × Earth",
+                radiusValue: 2.71,
+                radiusUnit: "Earth",
+                mass: "8.0 × Earth",
+                massValue: 8.0,
+                massUnit: "Earth",
+                period: "32.9 days",
+                periodValue: 32.9
+            }
+
+        };
+
+
+        const p1 = data[planet1];
+        const p2 = data[planet2];
+
+
+        document.getElementById("comparisonResult").innerHTML = `
+            <h3>${p1.name} 🆚 ${p2.name}</h3>
+
+            <p>🌍 Radius: ${p1.radius} — ${p2.radius}</p>
+
+            <p>⚖️ Mass: ${p1.mass} — ${p2.mass}</p>
+
+            <p>⏱️ Orbital period: ${p1.period} — ${p2.period}</p>
+        `;
+
+
+    const canvas = document.getElementById("comparisonChart");
+const ctx = canvas.getContext("2d");
+
+ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+const values1 = [
+    p1.radiusValue,
+    p1.massValue,
+    p1.periodValue
+];
+
+const values2 = [
+    p2.radiusValue,
+    p2.massValue,
+    p2.periodValue
+];
+
+const labels = ["Radius", "Mass", "Orbital Period"];
+
+const maxValue = Math.max(...values1, ...values2);
+
+const chartWidth = canvas.width - 100;
+const chartHeight = canvas.height - 70;
+const barWidth = 40;
+const gap = 60;
+
+ctx.fillStyle = "white";
+ctx.font = "14px Arial";
+
+labels.forEach(function(label, i) {
+
+    const x = 70 + i * gap * 2;
+
+    const height1 = (values1[i] / maxValue) * chartHeight;
+    const height2 = (values2[i] / maxValue) * chartHeight;
+
+    ctx.fillStyle = "#8ab4ff";
+    ctx.fillRect(
+        x,
+        canvas.height - 40 - height1,
+        barWidth,
+        height1
+    );
+
+    ctx.fillStyle = "#ff9f80";
+    ctx.fillRect(
+        x + barWidth + 5,
+        canvas.height - 40 - height2,
+        barWidth,
+        height2
+    );
+
+    ctx.fillStyle = "white";
+    ctx.fillText(label, x - 10, canvas.height - 15);
+
+    ctx.fillText(
+        values1[i],
+        x,
+        canvas.height - 45 - height1
+    );
+
+    ctx.fillText(
+        values2[i],
+        x + barWidth + 5,
+        canvas.height - 45 - height2
+    );
+});   
+
+    }
+
+</script>
+   
+
+</body>
+
+</html>
